@@ -1,0 +1,47 @@
+import java.util.Scanner;
+//Noel Rivera, Computer Science
+
+public class HW2 {
+public static void main(String[] args){
+Scanner sc = new Scanner(System.in);
+
+int score = 0;
+System.out.println("Hello there! Let's play a game of trivia. Ready?");
+String answer = sc.nextLine();
+if (answer.equalsIgnoreCase("yes"))
+    {System.out.println("Okay, let's go.");}
+else
+    {System.out.println("Okay, maybe next time!");}
+
+System.out.println("How many colors are there in a rainbow?");
+Integer answer1 = sc.nextInt();
+sc.nextLine();
+if (answer1 == 7)
+    {score++;
+        System.out.print("Nice! Next question");
+    System.out.println(" Score: " + score + "/1");}
+else 
+    {System.out.print("That's incorrect, Next question.");
+    System.out.println(" Score: " + score + "/1");}
+
+    System.out.println(" Which planet is known as the Red Planet?");
+    String answer2 = sc.nextLine();
+if (answer2.equals ("Mars"))
+    {score++;
+        System.out.print("Nice! Next question.");
+    System.out.println(" Score: " + score + "/2");}
+else 
+    {System.out.print("That's incorrect. Next question.");
+    System.out.println(" Score: " + score + "/2");}
+
+ System.out.println("What flies without wings?");
+    String answer3 = sc.nextLine();
+if (answer3.equals ("time"))
+    {System.out.println("Nice!");
+        score++;}
+else 
+    {System.out.println("That's incorrect.");}
+
+System.out.println("Game over, your final score is: " + score + ("/3!"));
+}
+}
