@@ -1,0 +1,15 @@
+
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+System.out.println ("Please give me a word");
+String word = sc.nextLine();
+for (int i = 0; i < word.length(); i++)
+//"word.length()" is taking the amount of letters in the word provided by the user 
+{ System.out.println(word.charAt(i));}
+//"word.charAt(i) is taking each letter individually and giving it to the print statement before moving onto the next letter and line"
+
+//this for loop makes it simple to understand how the system runs through the word, takes each letter individually, and prints them out before moving onto the next
+}
+}
