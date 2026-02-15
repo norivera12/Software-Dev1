@@ -49,9 +49,9 @@ Scanner sc = new Scanner(System.in);
         System.out.println("Give me a word and I'll give it back backwords");
         sc.nextLine();
     String word = sc.nextLine();
-        String reverse = "";
+        String backwords = "";
         for (int i = word.length() - 1; i >= 0; i--)
-        {reverse = reverse + word.charAt(i);} 
-    System.out.println(reverse);
+        {backwords = backwords + word.charAt(i);} 
+    System.out.println(backwords);
     }
 }
