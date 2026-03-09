@@ -1,0 +1,43 @@
+import java.util.Scanner;
+public class Midterm {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+
+//Create a username
+Boolean validUsername = false;
+String username = " "; //username is the variable that will hold the username that the user creates and this line does not allow for a space in it
+while (!validUsername) //this is the loop that will keep asking for a username until it complies with all of the requirements
+    {System.out.println("Create a username");
+    username = sc.nextLine();
+
+if (username.length() < 5) 
+        {System.out.println("Username must be at least 5 characters long.");}
+    else if (username.length() > 15)
+        {System.out.println("Username must be less than 15 characters long.");}
+    else {System.out.println("New Username: " + username);
+          validUsername = true;}
+}
+//username must be between 5 and 15 characters long
+
+
+//Create a password
+Boolean validPassword = false;
+String password = " ";
+while (!validPassword) //same loop as the username but for the password
+    {System.out.println("Create a password");
+    password = sc.nextLine();
+
+if (password.length() < 8 && !password.matches(".*[0-9].*"))
+        {System.out.println("Password must be at least 8 characters long and have a number in it.");}   
+    else if (password.length() < 8)
+     {System.out.println("Password must be at least 8 characters long.");}
+    else if (!password.matches(".*[0-9].*"))
+        {System.out.println("Password must have a number in it.");}
+    else {System.out.println("Password accepted. Welcome!");
+          validPassword = true;}
+    }
+//password must be at least 8 characters long and have a number in it
+
+}
+}
