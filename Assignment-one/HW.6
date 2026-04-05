@@ -1,0 +1,45 @@
+Main
+Student s1 = new Student("Cleg", 3.5, 41);
+Student s2 = new Student("Milly", 3.0, 7);
+Student s3 = new Student("Drew", 3.8, 30);
+Student s4 = new Student("Skii", 3.9, 11);
+Student s5 = new Student("Hags", 3.2, 12);
+
+int generatedID = (int)(Math.random() * 88); 
+System.out.println("Generated ID: " + generatedID);
+s1.StudentInfo(generatedID);
+s2.StudentInfo(generatedID);
+s3.StudentInfo(generatedID);
+s4.StudentInfo(generatedID);
+s5.StudentInfo(generatedID);
+
+Student
+public class Student {
+
+String name;
+double gpa; 
+int id;
+String lunch;
+public Student(String n, double g, int i) {
+    name = n;
+    gpa = g;
+    id = i;
+}
+
+
+    void StudentInfo(int generatedID){
+if (this.gpa >= 3.6 && this.id == generatedID) {
+    System.out.println(name + " (" + gpa + ", " + id + ")" + " is an honor student. and has free lunch today!" );
+}
+else if (this.gpa >= 3.6 && this.id != generatedID) {
+    System.out.println(name + " (" + gpa + ", " + id + ")" + " is an honor student but does not have free lunch today.");
+}
+else if (this.gpa < 3.6 && this.id == generatedID) {
+    System.out.println(name + " (" + gpa + ", " + id + ")" + " is not an honor student but has free lunch today!");
+}
+else {
+    System.out.println(name + " (" + gpa + ", " + id + ")" + " is not an honor student and does not have free lunch today.");
+}
+}
+
+}
