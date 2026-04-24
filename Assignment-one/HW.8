@@ -1,0 +1,66 @@
+import java.util.Stack;
+import java.util.LinkedList;
+
+public class HW8 {
+
+    public static void main(String[] args) {
+        Stack<Integer> stax = new Stack<>();
+        
+        stax.push(70);
+        stax.push(34);
+        stax.push(807); 
+        stax.push(61);
+        stax.push(28);
+        stax.push(563);
+        stax.push(492);
+        stax.push(386);
+
+        int max = stax.peek();
+        int min = stax.peek();
+        for (int i = 0; i < stax.size(); i++){
+            if (stax.get(i) > max){
+                max = stax.get(i);
+            }
+            if (stax.get(i) < min){
+                min = stax.get(i);
+            }
+        }
+        System.out.println("The maximum value in the stack is " + max);
+        System.out.println("The minimum value in the stack is " + min);
+        System.out.println(stax.size());
+
+        
+
+  LinkedList<Integer> linky = new LinkedList<>();
+
+        linky.add(10);
+        linky.add(20);
+        linky.add(30);
+        linky.add(40);
+        linky.add(50);
+        int middleIndex = linky.size() / 2;
+        int middleValue = linky.get(middleIndex);
+        System.out.println("The middle value of the linked list is " + middleValue);
+
+//Takng things from a fridge
+
+Stack<String> fridge = new Stack<>();
+fridge.push(" Red Gatorade");
+fridge.push("Water");
+fridge.push("Soda");
+fridge.push("Juice");
+fridge.push("Milk");  
+fridge.push("Blue Gatorade");
+
+fridge.pop();
+System.out.println(fridge);
+fridge.pop();
+System.out.println(fridge);
+fridge.push("Chocolate Milk");
+System.out.println(fridge);
+System.out.println(fridge.search("Water"));
+
+
+        
+}
+}
